@@ -18,6 +18,7 @@ app.use(cors());
 
 app.use(express.json());
 
+console.log('MONGODB_URL:', process.env.MONGODB_URL);
 connectDB();
 
 app.use(signup);
@@ -31,6 +32,8 @@ app.use(trending);
 app.use(admin);
 app.use(adminPosts);
 app.use(UserDetails);
+
+
 
 const PORT = 3002;
 app.listen(PORT, () => {
