@@ -18,7 +18,6 @@ app.use(cors());
 
 app.use(express.json());
 
-console.log('MONGODB_URL:', process.env.MONGODB_URL);
 connectDB();
 
 app.use(signup);
